@@ -1,0 +1,236 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+  text-decoration:none;
+}
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+  font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+  font-family: arial,helvetica;
+  color: #333;
+  color: rgba(0,0,0,0.5);
+}
+#myVideo
+{
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 90%;
+  filter: grayscale(50%);
+  background-color: white;
+  object-fit: cover;
+  z-index: 3;
+  background-size: contain;
+  background-position: center center;
+}
+.wrap{
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  position: relative;
+}
+h2:nth-of-type(odd){
+  font-size: 3em;
+  line-height: 1.2;
+    font-weight: 500;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    padding-bottom: 15%;
+    color:#151515;
+    top: 20%;
+    letter-spacing: normal;
+}
+p{
+  font-size: 2em;
+}
+.intro p{
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+.section{
+  text-align:center;
+}
+@media (max-width: 767px){
+  .navbar-nav > li > a{
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.navbar-fixed-top{
+  min-height: 80px;
+  background-color: black !important;
+  transition: background-color 200ms linear;
+
+}
+.navbar-fixed-top.scrolled .nav-link{
+  color: white;
+}
+.navbar-left{
+  margin-right: 10px;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand.scrolled{
+  margin: 0;
+}
+.navbar-brand{
+  color: white;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
+  font-weight: 700;
+  font-size: 2vmax;
+  letter-spacing: 5px;
+}
+.navbar-nav>li>a{
+  color: white;
+  text-shadow: none;
+  font-weight: 600;
+  -webkit-transition: .5s all ease-out;
+    -moz-transition: .5s all ease-out;
+    transition: .5s all ease-out;
+}
+.nav>li>a{
+  padding: 18px 20px;
+  font-family: 'Raleway',sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+.navbar-toggle .icon-bar{
+  background-color: white;
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+.navbar-toggle{
+  background-color: black;
+}
+.navbar-brand:focus, .navbar-brand:hover{
+  color: orange;
+}
+.nav>li>a:focus{
+  background: transparent;
+  color: orange;
+  border-bottom: 1px solid orange;
+}
+.navbar-nav>li.active a{
+background: none;
+  color: orange;
+  transition:color 0.7s;
+  border-bottom: 1px solid orange;  
+}
+.navbar-nav>li>a:hover{
+  background: none;
+  color: orange;
+  transition:color 0.7s;
+  border-bottom: 1px solid orange;
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+.jumbotron{
+  color: #2c3e50;
+  padding-bottom: 10%;
+  margin-top: 7%;
+  background:  #ecf0f1;
+}
+
+.layer{
+  position: absolute;
+  z-index: 4;
+  height: 20%;
+  width: 100%;
+  /*left:50%;*/
+  top: 43%;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  line-height: 1.1;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
+  text-transform: uppercase;
+  font-size: 4.2em;
+  letter-spacing: 0.1em;
+  transform: translate3d(0,0,0);
+
+}
+hr{
+  margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    height: 0;
+    width: 30%;
+    border-top: 1px solid #eee; 
+}
+.card-image {
+  width: 300px;
+  height: 350px;
+  padding-bottom: 10%;
+  transition: 0.1s linear;
+}
+.card-title {
+  margin-bottom: 1rem;
+  font-size: 1.6em;
+  font-family: 'Raleway';
+  font-weight: 600;
+}
+.card {
+  margin: 2rem auto;
+  padding: 10px 5px;
+  border: 1px solid #ddd;
+  border-radius: 16%;
+}
+.card-text{
+font-family: 'Helvetica';
+font-size: 1.1em;
+padding-bottom: 10%;
+text-align: left;
+margin-left: 9%;
+font-weight: 400;
+}
+.carousel-control.left, .carousel-control.right{
+  background-image:none;
+}
