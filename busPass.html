@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Easy Travel</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity=" sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+  <!-- This is for fonts-->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <style>
+
+    /* Sections
+     * --------------------------------------- */
+    #section0 img,
+    #section1 img{
+      margin: 20px 0 0 0;
+    }
+    #section2 img{
+      margin: 20px 0 0 52px;
+    }
+    #section3 img,#section4 img,#section5 img{
+      margin: 20px 0 0 52px;
+    }
+    #section6 img{
+      bottom: 0px;
+      position: absolute;
+      margin-left: -420px;
+    }
+    .intro p{
+      width: 50%;
+      margin: 0 auto;
+      font-size: 1.5em;
+    }
+    /*.twitter-share-button{
+      position: absolute;
+      z-index: 99;
+      right: 149px;
+      top: 9px;
+    }*/
+
+  </style>
+  <!--[if IE]>
+    <script type="text/javascript">
+       var console = { log: function() {} };
+    </script>
+  <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+  <nav class="navbar navbar-fixed-top" style="min-height:56px;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <!-- <span class="sr-only">Toggle navigation</span> -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Easy Travel</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul  class="nav navbar-nav navbar" id="menu">
+          <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
+          <li data-menuanchor="events"><a href="#events">About</a></li>
+          <li data-menuanchor="sponsors"><a href="#sponsors">How it works</a></li>
+          <li data-menuanchor="team"><a href="#team">Features</a></li>
+          <li data-menuanchor="statistics"><a href="#statistics">Statistics</a></li>
+          <li data-menuanchor="review"><a href="#review">Meet Our Customers</a></li>                    
+          <li data-menuanchor="contact"><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+</div>
+
+
+
+  
+  
+  
+  
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.fullPage.js"></script>
+  <script type="text/javascript" src="jquery.fullpage.extensions.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        sectionsColor: ['white', 'white', 'white', 'white', 'white', 'white', 'white'],
+        anchors: ['home', 'events', 'sponsors', 'team', 'statistics', 'review','contact'],
+        menu: '#menu',
+        animateAnchor: true,
+        navigation: true,
+        css3:true,
+        autoScrolling: true,
+        normalScrollElements: '.navbar-fixed-top',
+        navigationPosition: 'right',
+        navigationTooltips: ['Home', 'Events','Sponsors','Team','Statistics','Review','Contact'],
+        continousVertical:true,
+        fixedElements: '.navbar-fixed-top',
+        loopBottom:true,
+        controlArrows: true,
+        scrollBar: true,
+        touchSensitivity: 15,
+        normalScrollElementTouchThreshold: 3,
+        lazyLoading:true,
+        slideNavigation:true,
+        scrollingSpeed: 1000
+      });
+    });
+  </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
