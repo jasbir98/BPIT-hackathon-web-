@@ -14,46 +14,9 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <style>
-
-    /* Sections
-     * --------------------------------------- */
-    /*#section0 img,
-    #section1 img{
-      margin: 20px 0 0 0;
-    }
-    #section2 img{
-      margin: 20px 0 0 52px;
-    }
-    #section3 img,#section4 img,#section5 img{
-      margin: 20px 0 0 52px;
-    }
-    #section6 img{
-      bottom: 0px;
-      position: absolute;
-      margin-left: -420px;
-    }*/
-    .intro p{
-      width: 50%;
-      margin: 0 auto;
-      font-size: 1.5em;
-    }
-    /*.twitter-share-button{
-      position: absolute;
-      z-index: 99;
-      right: 149px;
-      top: 9px;
-    }*/
-
-  </style>
-  <!--[if IE]>
-    <script type="text/javascript">
-       var console = { log: function() {} };
-    </script>
-  <![endif]-->
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-fluid"> 
   <nav class="navbar navbar-fixed-top" style="min-height:56px;">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -63,17 +26,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Easy Travel</a>
+                <a class="navbar-brand" href="#home" style="text-transform: uppercase;">Easy Travel</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul  class="nav navbar-nav navbar" id="menu">
           <li data-menuanchor="home" class="active"><a href="#home">Home</a></li>
           <li data-menuanchor="events"><a href="#events">About</a></li>
-          <li data-menuanchor="sponsors"><a href="#sponsors">How it works</a></li>
           <li data-menuanchor="team"><a href="#team">Features</a></li>
           <li data-menuanchor="statistics"><a href="#statistics">Statistics</a></li>
-          <li data-menuanchor="review"><a href="#review">Meet Our Customers</a></li>                    
+          <li data-menuanchor="review"><a href="#review">Reviews</a></li>                    
           <li data-menuanchor="contact"><a href="#contact">Contact Us</a></li>
+          <li ><button style="margin-top:10px;margin-left: 300%;" type="button" class="btn btn-success" onclick="window.open('signup.html')">Sign Up</button></li>
+          <!-- <div class="btn-group" style="text-align: right;">
+              <button style="margin-top:10px;" type="button" class="btn btn-success" onclick="window.open('signup.html')">Sign Up</button>
+   
+          </div> -->
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -95,26 +62,46 @@
   </div>
   <div class="section" id="section1">
     <div class="container">
-      <div class="intro jumbotron">
-        <h2><i class="fas fa-hand-point-right" aria-hidden="true""></i>About<i class="fas fa-hand-point-left" aria-hidden="true"></i></h2>
-        <!-- <h2>Awesome Events in which you can Participate.</h2> -->
-        <div class="row container-fluid">
-          <div class="col-lg-4 col-sm-12">
-            <div class="thumbnail">
-              <h3>Tech Events</h3>
-              <img style="margin: 0;" src="techevents.jpeg"/>
+      <div class="intro"> 
+        <div class="row container">
+          <div class="col-md-6 col-sm-12" style="padding-top: 200px;">
+            <div>
+              <p>One tap and a car comes directly to you. Hop in—your driver knows exactly where to go. And when you get there, just step out. Payment is completely seamless.</p>
+
             </div>
           </div>
-          <div class="col-lg-4 col-sm-12">
-            <div class="thumbnail">
-              <h3>Non-Tech Events</h3>
-              <img style="margin: 0;" src="non-techevents.jpg"/>
+          <div class="col-md-6 col-sm-12">
+            <div>
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="image1.jpg">
+                </div>
+                <div class="item">
+                  <img src="image1.jpg">
+                </div>
+                <div class="item">
+                  <img src="image1.jpg">
+                </div>
+              </div>
+  <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
-          </div>
-          <div class="col-lg-4 col-sm-12">
-            <div class="thumbnail">
-              <h3>Workshops</h3>
-              <img style="margin: 0;" src="workshops.jpg"/>
             </div>
           </div>
         </div>
@@ -122,77 +109,64 @@
       </div>
     </div>
   </div>
-  <div class="section" id="section2">
-    <div class="container">
-      <div class="intro jumbotron" style="padding-bottom: 7%;">
-      <h2 style="padding-bottom: 7%;"><i class="fas fa-hand-point-right" aria-hidden="true""></i>How It Works<i class="fas fa-hand-point-left" aria-hidden="true"></i></h2>
-      <!-- <p>HTML markup example to define 4 sections.</p> -->
-      <div class="row container-fluid">
-        <div class="col-lg-4 col-sm-6">
-          <div class="thumbnail">
-            <img style="margin: 0;" src="sponsor1.png" alt=""/>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="thumbnail">
-            <img style="margin: 0;" src="sponsor1.png" alt=""/>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="thumbnail">
-            <img style="margin: 0;" src="sponsor1.png" alt=""/>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="thumbnail">
-            <img style="margin: 0;" src="sponsor1.png" alt=""/>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="thumbnail">
-            <img style="margin: 0;" src="sponsor1.png" alt=""/>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="thumbnail">
-            <img style="margin: 0;" src="sponsor1.png" alt=""/>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    </div>
-  </div>
   <div class="section text-center" id="section3">
     <div class="container">
-      <div class="intro" style="padding: 10%;">
-        <h2><i class="fas fa-hand-point-right" aria-hidden="true""></i>Features<i class="fas fa-hand-point-left" aria-hidden="true"></i></h2>
+      <div class="intro">
         <!-- <h2>Awesome Events in which you can Participate.</h2> -->
-        <div class="row container-fluid">
-          <div class="col-lg-4 col-sm-12">
-            <div class="thumbnail" style="padding-bottom: 20px;">
-              <div style="background: #ddd;">
+        <div class="row container">
+          <div class="col-md-4 col-sm-12" style="text-align: justify;">
+            <div style="padding-bottom: 20px;">
+              <div class="animation">
                 <img src="bus.png"/>
               </div>
-              <h1 style="font-size: 1.6em;margin: 10px 0;font-weight: 300;">Easiest way around</h1>
+              <h1 style="font-size: 1.8em;margin: 10px 0;font-weight: 100;">Easiest way around</h1>
               <span>One tap and a car comes directly to you. Hop in—your driver knows exactly where to go. And when you get there, just step out. Payment is completely seamless.</span>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-12">
-            <div class="thumbnail"  style="padding-bottom: 20px;">
-              <div style="background: #ddd;">
+          <div class="col-md-4 col-sm-12" style="text-align: justify;">
+            <div style="padding-bottom: 20px;">
+              <div class="animation">
                 <img src="cash.png" style="width: 70px;margin: 30px 0;">
               </div>
-              <h1 style="font-size: 1.6em;margin: 10px 0;font-weight: 300;">Easiest way around</h1>
+              <h1 style="font-size: 1.8em;margin: 10px 0;font-weight: 100;">Easy to Use, Easy to Pay</h1>
               <span>One tap and a car comes directly to you. Hop in—your driver knows exactly where to go. And when you get there, just step out. Payment is completely seamless.</span>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-12">
-            <div class="thumbnail"  style="padding-bottom: 20px;">
-              <div style="background: #ddd;">
+          <div class="col-md-4 col-sm-12" style="text-align: justify;">
+            <div style="padding-bottom: 20px;">
+              <div class="animation">
                 <img src="time.png"/ style="width: 70px;margin: 30px 0;">
               </div>
-              <h1 style="font-size: 1.6em;margin: 10px 0;font-weight: 300;">Easiest way around</h1>
+              <h1 style="font-size: 1.8em;margin: 10px 0;font-weight: 100;">Real-time booking</h1>
+              <span>One tap and a car comes directly to you. Hop in—your driver knows exactly where to go. And when you get there, just step out. Payment is completely seamless.</span>
+            </div>
+          </div>
+        </div>
+        <div class="row container">
+          <div class="col-md-4 col-sm-12" style="text-align: justify;">
+            <div style="padding-bottom: 20px;">
+              <div class="animation">
+                <img src="feature4.png" style="width: 70px;margin: 30px 0;"/>
+              </div>
+              <h1 style="font-size: 1.8em;margin: 10px 0;font-weight: 300;">Entertainment</h1>
+              <span>One tap and a car comes directly to you. Hop in—your driver knows exactly where to go. And when you get there, just step out. Payment is completely seamless.</span>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12" style="text-align: justify;">
+            <div style="padding-bottom: 20px;">
+              <div class="animation">
+                <img src="feature5.png" style="width: 70px;margin: 30px 0;">
+              </div>
+              <h1 style="font-size: 1.8em;margin: 10px 0;font-weight: 300;">E-Ticket</h1>
+              <span>One tap and a car comes directly to you. Hop in—your driver knows exactly where to go. And when you get there, just step out. Payment is completely seamless.</span>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12" style="text-align: justify;">
+            <div style="padding-bottom: 20px;">
+              <div class="animation">
+                <img src="feature6.png"/ style="width: 70px;margin: 30px 0;">
+              </div>
+              <h1 style="font-size: 1.8em;margin: 10px 0;font-weight: 300;">Social-Connections</h1>
               <span>One tap and a car comes directly to you. Hop in—your driver knows exactly where to go. And when you get there, just step out. Payment is completely seamless.</span>
             </div>
           </div>
@@ -202,14 +176,36 @@
     </div>
   </div>
   <div class="section" id="section4">
-    <div class="intro">
-       <h2 style="margin-bottom: 18%;"><i class="fas fa-hand-point-right" aria-hidden="true""></i>Statistics<i class="fas fa-hand-point-left" aria-hidden="true"></i></h2>
-    </div>
+    <div class="contact" style="background-image: none;background-color:#F8F8F8;"><p style="margin-left: 40px;color: white;font-size: 36px;font-weight: 400;letter-spacing: 4px;padding-bottom: 10px;"></p>
+      <div class="container text-center">
+        <h1 style="letter-spacing: 10px;margin-bottom:80px;color:black;font-weight: 400;text-transform: uppercase;font-size: 40px;line-height: 48px;font-family: 'Helvetica';">Numbers speak louder</h1>
+        <div class="row">
+          <div class="col-md-4 outerstat text-center">
+            <div class="stat animation">
+              <img src="stat1.png" style="width: 30%; margin: 20px 0;"/>
+              <p style="text-transform: uppercase;letter-spacing: 2px; font-weight: 600;font-size: 16px;line-height: 24px;">Daily Users</p>
+              <h1 style="font-size: 72px;text-decoration: bold; line-height: 80px;font-weight: 100;font-family: 'Helvetica';color: black;">450+</h1>
+            </div>
+          </div>
+          <div class="col-md-4 outerstat text-center">
+            <div class="stat animation">
+              <img src="stat2.png" style="width: 30%; margin: 20px 0;"/>
+              <p style="text-transform: uppercase;letter-spacing: 2px; font-weight: 600;font-size: 16px;line-height: 24px;">Bus Passes Issued</p>
+              <h1 style="font-size: 72px;text-decoration: bold; line-height: 80px;font-weight: 100;font-family: 'Helvetica';color: black;">200</h1>
+            </div>
+          </div>
+          <div class="col-md-4 outerstat text-center">
+            <div class="stat animation">
+              <img src="stat3.png" style="width: 30%; margin: 20px 0;"/>
+              <p style="text-transform: uppercase;letter-spacing: 2px; font-weight: 600;font-size: 16px;line-height: 24px;">daily users</p>
+              <h1 style="font-size: 72px;text-decoration: bold; line-height: 80px;font-weight: 100;font-family: 'Helvetica';color: black;">4.5</h1>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
+</div>
   <div class="section" id="section5">
-    <div class="intro">
-       <h2 style="padding: 0;"><i class="fas fa-hand-point-right" aria-hidden="true""></i>Meet Our Customers<i class="fas fa-hand-point-left" aria-hidden="true"></i></h2>
-    </div>
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -230,7 +226,7 @@
                   </div>
                   <div class="card-block">
                     <h4 class="card-title text-center">Jasbir Singh, Web Developer</h4>
-                    <p class="card-text">"Mai bahut gareeb insaan hoon.<br> Mere pass itna time nahi ki kuch chutiyon se mai ticket loon<br> Bhai hum ko ticket lene ki aadat nahi hai."</p>
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae nesciunt quaerat alias culpa dignissimos rerum illum, quo minima itaque maxime in sed temporibus a libero totam accusamus perspiciatis? Hic, delectus!"</p>
                   </div>
                 </div>
             </div>
@@ -241,7 +237,7 @@
                   </div>
                   <div class="card-block">
                     <h4 class="card-title text-center">Jasbir Singh, Web Developer</h4>
-                    <p class="card-text">"Mai bahut gareeb insaan hoon.<br> Mere pass itna time nahi ki kuch chutiyon se mai ticket loon<br> Bhai hum ko ticket lene ki aadat nahi hai."</p>
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus doloribus, excepturi non labore voluptates officia accusamus. Nemo odio officia fugit, eum. Unde, quo cumque error. Atque eius cum repellat illo."</p>
                   </div>
                 </div>
             </div>
@@ -256,7 +252,7 @@
                   </div>
                   <div class="card-block">
                     <h4 class="card-title text-center">Jasbir Singh, Web Developer</h4>
-                    <p class="card-text">"Mai bahut gareeb insaan hoon.<br> Mere pass itna time nahi ki kuch chutiyon se mai ticket loon<br> Bhai hum ko ticket lene ki aadat nahi hai."</p>
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ipsam eos quasi et fugiat dolores praesentium aut beatae aperiam, nemo suscipit voluptatem provident impedit voluptas nostrum eligendi hic minima ducimus!"</p>
                   </div>
                 </div>
             </div>
@@ -267,7 +263,7 @@
                   </div>
                   <div class="card-block">
                     <h4 class="card-title text-center">Jasbir Singh, Web Developer</h4>
-                    <p class="card-text">"Mai bahut gareeb insaan hoon.<br> Mere pass itna time nahi ki kuch chutiyon se mai ticket loon<br> Bhai hum ko ticket lene ki aadat nahi hai."</p>
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quis consequatur pariatur sunt dolores totam, saepe aperiam aliquid autem officiis placeat error repudiandae atque accusamus numquam id eveniet magnam! Mollitia!"</p>
                   </div>
                 </div>
             </div>
@@ -282,7 +278,7 @@
                   </div>
                   <div class="card-block">
                     <h4 class="card-title text-center">Jasbir Singh, Web Developer</h4>
-                    <p class="card-text">"Mai bahut gareeb insaan hoon.<br> Mere pass itna time nahi ki kuch chutiyon se mai ticket loon<br> Bhai hum ko ticket lene ki aadat nahi hai."</p>
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima sit error laudantium optio recusandae nobis vel eos id sed? Ducimus, rerum voluptas consectetur. Vel, maiores enim reiciendis, dolore magnam omnis."</p>
                   </div>
                 </div>
             </div>
@@ -293,7 +289,7 @@
                   </div>
                   <div class="card-block">
                     <h4 class="card-title text-center">Jasbir Singh, Web Developer</h4>
-                    <p class="card-text">"Mai bahut gareeb insaan hoon.<br> Mere pass itna time nahi ki kuch chutiyon se mai ticket loon<br> Bhai hum ko ticket lene ki aadat nahi hai."</p>
+                    <p class="card-text">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, excepturi amet hic sapiente itaque quis debitis adipisci consectetur dolorem, dolorum mollitia, nemo minima fugit harum? Ea quis cumque dolorem ad."</p>
                   </div>
                 </div>
             </div>
@@ -313,14 +309,34 @@
     </div>
   </div>
   <div class="section" id="section6">
-    <div class="intro">
-      <h2 style="color: white; padding-bottom:0%;">Contact Us</h2>
-      <p>
-        Iss bande ne hi poora fest organize karaya hai aur isi ne site bhi banayi hai.. Taaliya!!
-        <br /><br /><br /><br /><br /><br />
-      </p>
-    </div>
-    <img src="imgs/tablets.png" alt="tablets" />
+    <div class="contact"><p style="margin-left: 40px;color: white;font-size: 36px;font-weight: 400;letter-spacing: 4px;">Contact Us</p>
+      <div class="row">
+        <div class="col-lg-12">
+          <form id="contactForm" name="sentMessage" novalidate>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input class="form-control" id="name" type="text" placeholder="Your Name *" required data-validation-required-message="Please Enter your Name." >
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please Enter your email Address." >
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please Enter your Phone Number." >
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <textarea style="padding: 3.2rem 0.65rem;" class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter your Message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+                <button class="btn btn-lg btn-success" style="margin-left: 4%;margin-bottom:10%;">Submit</button> 
+              </div> 
+            </div>
+          </form>
+        </div>
+      </div>
   </div>
 </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -329,8 +345,8 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('#fullpage').fullpage({
-        sectionsColor: ['white', 'white', 'white', 'white', 'white', 'white', 'white'],
-        anchors: ['home', 'events', 'sponsors', 'team', 'statistics', 'review','contact'],
+        sectionsColor: ['white','white', 'white', 'white', 'white', 'white'],
+        anchors: ['home', 'events', 'team', 'statistics', 'review','contact'],
         menu: '#menu',
         animateAnchor: true,
         navigation: true,
@@ -338,7 +354,7 @@
         autoScrolling: true,
         normalScrollElements: '.navbar-fixed-top',
         navigationPosition: 'right',
-        navigationTooltips: ['Home', 'Events','Sponsors','Team','Statistics','Review','Contact'],
+        navigationTooltips: ['Home', 'Events','Team','Statistics','Review','Contact'],
         continousVertical:true,
         fixedElements: '.navbar-fixed-top',
         loopBottom:true,
