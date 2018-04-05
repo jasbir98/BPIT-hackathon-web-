@@ -50,7 +50,7 @@ $(window).scroll(function(){
    }                   
 });
 $('.carousel').carousel({
-  interval: 1000 * 2
+  interval: 1000 * 3
 });
 $(window).on("load",function() {
   $(window).scroll(function() {
