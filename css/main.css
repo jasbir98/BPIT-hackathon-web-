@@ -1,6 +1,12 @@
 @CHARSET "ISO-8859-1";
 /* Reset CSS
  * --------------------------------------- */
+ html{
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: 0; 
+ }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
@@ -231,7 +237,7 @@ font-weight: 400;
   background-image:none;
 }
 .contact{
-  background-image: url("image8.jpg");
+  background-image: url("../images/image8.jpg");
   width: 100% !important;
     background-position: center !important;
     background-size: cover !important;
@@ -288,7 +294,13 @@ font-weight: 400;
   border: 1px solid #ccc;
   padding-bottom: 10px; 
 }
-.animation{
-  background-color: white;
-  opacity: 1;
+.hideme
+{
+      -webkit-transition: all 2s ease; transition: all 2s ease;
+    opacity:0;
+}
+
+.showme {
+      -webkit-transition: all 2s ease; transition: all 2s ease;
+  opacity:1!important;
 }

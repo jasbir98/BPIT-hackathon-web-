@@ -1,10 +1,3 @@
-// $(function () {
-//   $(document).scroll(function () {
-//       var $nav = $(".navbar-fixed-top");
-//       $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-//     });
-// });
-// Cache selectors
 var lastId,
     topMenu = $("#menu"),
     topMenuHeight = topMenu.outerHeight()+15,
@@ -52,19 +45,35 @@ $(window).scroll(function(){
 $('.carousel').carousel({
   interval: 1000 * 3
 });
-$(window).on("load",function() {
-  $(window).scroll(function() {
-    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-    $(".animation").each(function() {
-      /* Check the location of each desired element */
-      var objectBottom = $(this).offset().top + $(this).outerHeight();
+// $(window).on("load",function() {
+//   $(window).scroll(function() {
+//     var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+//     $(".animation").each(function() {
+//       /* Check the location of each desired element */
+//       var objectBottom = $(this).offset().top + $(this).outerHeight();
       
-      /* If the element is completely within bounds of the window, fade it in */
-      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-        if ($(this).css("opacity")==0) {$(this).fadeTo(2000,1);}
-      } else { //object goes out of view (scrolling up)
-        if ($(this).css("opacity")==1) {$(this).fadeTo(2000,0);}
-      }
+//        If the element is completely within bounds of the window, fade it in 
+//       if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+//         if ($(this).css("opacity")==0) {$(this).fadeTo(2000,1);}
+//       }
+//        else { //object goes out of view (scrolling up)
+//         if ($(this).css("opacity")==1) {$(this).fadeTo(2000,0);}
+//       }
+//     });
+//   }).scroll(); //invoke scroll-handler on page-load
+// });
+
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.hideme').each( function(i){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                $(this).addClass('showme');
+            }
+            if( bottom_of_window < bottom_of_object ){
+                $(this).removeClass('showme');
+            }
+        });
     });
-  }).scroll(); //invoke scroll-handler on page-load
 });
