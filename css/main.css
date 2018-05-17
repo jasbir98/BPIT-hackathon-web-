@@ -66,19 +66,13 @@ body{
   top: 0;
   right: 0;
   width: 100%;
-  height: 90%;
+  height: 100%;
   filter: grayscale(50%);
   background-color: white;
   object-fit: cover;
   z-index: 3;
   background-size: contain;
   background-position: center center;
-}
-.wrap{
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
-  position: relative;
 }
 h2{
   font-size: 3em;
@@ -303,4 +297,8 @@ font-weight: 400;
 .showme {
       -webkit-transition: all 2s ease; transition: all 2s ease;
   opacity:1!important;
+}
+.carousel-inner
+{
+  height: 64vh;
 }
